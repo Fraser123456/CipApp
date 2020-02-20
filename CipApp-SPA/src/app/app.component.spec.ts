@@ -1,5 +1,5 @@
 import { TestBed, async } from '@angular/core/testing';
-import { HomeComponent } from './home.component';
+import { HomeComponent } from './MasterPage/home/home.component';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {

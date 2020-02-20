@@ -1,39 +1,39 @@
-<app-nav></app-nav>
 
 <div
   class="row"
   [ngStyle]="{
     'background-image': 'url(' + photoUrl + ')',
     'Background-size': 'cover',
-    height: '80%',
-    overflow: 'none',
+    height: '100%',
     'background-attachment': 'fixed'
   }"
   [@Img]="appearImg"
 >
   <div class="container">
     <div class="col-sm-12" style="margin-top: 18%;">
-      <h1 class="heading" style="color: white;">CIP Industries PTY LTD</h1>
+      <h1 class="heading" style="color: white;">CIP Industries (pty) Ltd</h1>
     </div>
-    <div class="col-sm-12 mt-5 mb-5" style="padding-top: 10%;" hidden>
+    <div class="col-sm-12 mt-5 mb-5" style="padding-top: 20%;" hidden>
       <div class="row">
-        <div class="col-sm-3">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-2">
           <div class="card" style="background-color: blueviolet;">
             <div class="card-body">
               <h1 style="color: white;">Products</h1>
             </div>
           </div>
         </div>
-        <div class="col-sm-1"></div>
-        <div class="col-sm-3">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-2">
           <div class="card" style="background-color: blueviolet;">
             <div class="card-body">
               <h1 style="color: white;">Who We Serve</h1>
             </div>
           </div>
         </div>
-        <div class="col-sm-1"></div>
-        <div class="col-sm-3">
+        <div class="col-sm-2"></div>
+
+        <div class="col-sm-2">
           <div class="card" style="background-color: blueviolet;">
             <div class="card-body">
               <h1 style="color: white;">Contact Us</h1>
@@ -42,6 +42,7 @@
         </div>
       </div>
     </div>
+      <app-tags></app-tags>
   </div>
 </div>
 <div class="row" style="height: 80%;" [@Img]="appearImg">
@@ -49,10 +50,12 @@
     <div class="col-sm-12 text-align" style="margin-top: 10%;">
       <h1 style="font-size: 4.5rem;" #aboutUs>About Us</h1>
     </div>
-    <div style="border-bottom: 1px solid grey; margin-top: 21px;"></div>
+    <div style="border-bottom: 1px solid grey; margin-top: 21px;" *ngIf="isOpen" [@slideInOutTopLine]></div>
 
     <div class="col-sm-12" *ngIf="isOpen" [@slideInOut]>
       <app-aboutus></app-aboutus>
     </div>
+    <div style="border-bottom: 1px solid grey; margin-top: 30px;" *ngIf="isOpen" [@slideInOutBottomLine]></div>
   </div>
 </div>
+<app-footer></app-footer>

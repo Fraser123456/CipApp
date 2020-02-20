@@ -1,20 +1,20 @@
 import {
   Component,
   AfterViewInit,
+  OnInit,
   HostListener,
   ViewChild,
   ElementRef
-} from "@angular/core";
+} from '@angular/core';
 import {
   trigger,
   state,
   style,
   animate,
   transition
-} from "@angular/animations";
+} from '@angular/animations';
 
 @Component({
-  selector: 'app-root',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
   animations: [
@@ -27,7 +27,7 @@ import {
         })
       ),
       state(
-        "end",
+        'end',
         style({
           transform: 'translateY(0)',
           opacity: '1'
@@ -58,22 +58,71 @@ import {
           })
         )
       ])
+    ]),
+    trigger('slideInOutTopLine', [
+      transition(':enter', [
+        style({
+          transform: 'translateX(50%)',
+          opacity: '0'
+        }),
+        animate(
+          '600ms ease-in',
+          style({
+            transform: 'translateX(0%)',
+            opacity: '1'
+          })
+        )
+      ]),
+      transition(':leave', [
+        animate(
+          '600ms ease-in',
+          style({
+            transform: 'translateX(50%)',
+            opacity: '0'
+          })
+        )
+      ])
+    ]),
+    trigger('slideInOutBottomLine', [
+      transition(':enter', [
+        style({
+          transform: 'translateX(-50%)',
+          opacity: '0'
+        }),
+        animate(
+          '600ms ease-in',
+          style({
+            transform: 'translateX(0%)',
+            opacity: '1'
+          })
+        )
+      ]),
+      transition(':leave', [
+        animate(
+          '600ms ease-in',
+          style({
+            transform: 'translateX(-50%)',
+            opacity: '0'
+          })
+        )
+      ])
     ])
   ]
 })
-export class HomeComponent implements AfterViewInit {
+export class HomeComponent implements OnInit, AfterViewInit  {
+
   appearImg: string = 'start';
   isOpen: boolean = false;
   title = 'CipApp-SPA';
   photoUrl = 'assets/Ice.jpg';
   @ViewChild('aboutUs', null) aboutUsDiv: ElementRef;
 
-  ngAfterViewInit() {
-    this.appearImg = 'end';
+  ngOnInit(): void {
+
   }
 
-  toggle() {
-    this.isOpen = !this.isOpen;
+  ngAfterViewInit(): void {
+    this.appearImg = 'end';
   }
 
   @HostListener('window:scroll', [])

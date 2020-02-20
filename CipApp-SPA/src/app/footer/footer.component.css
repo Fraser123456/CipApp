@@ -1,0 +1,21 @@
+.text-align{
+    text-align: center;
+}
+
+.heading{
+    color: white;
+    font-size: 30px;
+}
+
+p {
+    color: white; 
+    font-size: large; 
+    font-weight: 300;
+    margin-top: 5%;
+}
+
+.border1{
+    border: 1px solid white;
+    width: 50%;
+    margin-left: 25%;
+}
