@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
-  photoUrl = 'assets/Ice.jpg';
+  photoUrl = 'assets/images/Ice.jpg';
 
   constructor() { }
 

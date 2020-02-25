@@ -12,3 +12,71 @@ body html{
     margin: 0;
     padding: 0;
 }
+
+.backgroundImg{
+    background-image: url("../../../assets/images/Ice.jpg");
+    Background-size: cover;
+    height: 100%;
+    background-attachment: fixed;
+}
+
+.AboutUsRow{
+    background-color: azure;
+    height: 100%;
+}
+
+.container{
+    margin-top: 2%;
+}
+
+@media (max-width: 1440px){
+
+    .heading{
+        text-align: center;
+        font-size: 6.5rem;
+        font-family: serif;
+    }
+
+    #AboutUsRow{
+        height: 100%;
+    }
+  }
+
+@media (max-width: 1024px){
+    .heading{
+        text-align: center;
+        font-size: 5.5rem;
+        font-family: serif;
+    }
+
+    .AboutUsRow{
+        height: 100%;
+    }
+
+  }
+
+  @media (max-width: 1920px){
+    .heading{
+        text-align: center;
+        font-size: 6.5rem;
+        font-family: serif;
+    }
+
+    .AboutUsRow{
+        height: 100%;
+    }
+
+  }
+
+  @media (min-width: 2000px){
+    .heading{
+        text-align: center;
+        font-size: 6.5rem;
+        font-family: serif;
+    }
+
+    .AboutUsRow{
+        height: 80%;
+    }
+
+  }

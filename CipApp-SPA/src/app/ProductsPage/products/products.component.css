@@ -1,0 +1,13 @@
+.row{
+    margin-top: 3%;
+}
+
+h1 {
+    font-size: 3.5rem;
+    margin-top: 3%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}

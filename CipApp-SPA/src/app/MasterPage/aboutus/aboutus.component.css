@@ -5,3 +5,9 @@
     line-height: 1.5em;
     text-align: center;
 }
+
+.AboutUsCard {
+    border: none;
+    height: 100%;
+    background-color: azure;
+}

@@ -18,6 +18,9 @@ body {
     width: 200px;
     background-color: transparent;
     border-top: 1px solid white;
+    border-bottom: 0px;
+    border-right: 0px;
+    border-left: 0px;
     transition: 0.4s ease-out;
     position: relative;
     left: 0px;
@@ -104,4 +107,36 @@ body {
 
   .card:hover{
     cursor: pointer;
+  }
+
+  #Tags{
+    margin-top: 40%;
+  }
+
+  @media (max-width: 1440px){
+    #Tags{
+      margin-top: 40%;
+      margin-left: 10%;
+    }
+  }
+
+  @media (max-width: 1024px){
+    #Tags{
+      margin-top: 38%;
+      margin-left: 5%;
+    }
+  }
+
+  @media (max-width: 1920px){
+    #Tags{
+      margin-top: 35%;
+      margin-left: 5%;
+    }
+  }
+
+  @media (min-width: 2000px){
+    #Tags{
+      margin-top: 47%;
+      margin-left: 5%;
+    }
   }
