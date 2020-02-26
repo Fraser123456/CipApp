@@ -56,6 +56,29 @@ import {
           })
         )
       ])
+    ]),trigger('slideInOutWhoWeServe', [
+      transition(':enter', [
+        style({
+          transform: 'translateY(50%)',
+          opacity: '0'
+        }),
+        animate(
+          '600ms ease-in',
+          style({
+            transform: 'translateY(0%)',
+            opacity: '1'
+          })
+        )
+      ]),
+      transition(':leave', [
+        animate(
+          '500ms ease-in',
+          style({
+            transform: 'translateY(50%)',
+            opacity: '0'
+          })
+        )
+      ])
     ]),
     trigger("slideInOutTopLine", [
       transition(":enter", [
@@ -110,6 +133,7 @@ import {
 export class HomeComponent implements OnInit, AfterViewInit {
   appearImg: string = "start";
   isOpen: boolean = false;
+  isOpenWhoWeServe: boolean = false;
   isLoad: boolean = true;
   title: "CipApp-SPA";
   photoUrl: string = "assets/images/Ice.jpg";
@@ -129,11 +153,18 @@ export class HomeComponent implements OnInit, AfterViewInit {
     const element = this.aboutUsDiv.nativeElement;
     const viewportOffset = element.getBoundingClientRect();
     const top = viewportOffset.top;
-
+    console.log(top);
     if (top <= 375.5) {
       this.isOpen = true;
     } else {
       this.isOpen = false;
     }
+
+    if(top <= -355.875){
+      this.isOpenWhoWeServe = true;
+    } else {
+      this.isOpenWhoWeServe = false;
+    }
+
   }
 }

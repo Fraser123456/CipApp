@@ -13,6 +13,7 @@ import { TagsComponent } from './MasterPage/tags/tags.component';
 import { ProductsComponent } from './ProductsPage/products/products.component';
 import { MainRoutes } from './Routing/Routes';
 import { StartComponent } from './start/start.component';
+import { OtherComponent } from './MasterPage/otherinfo/other.component';
 
 @NgModule({
    declarations: [
@@ -23,7 +24,8 @@ import { StartComponent } from './start/start.component';
       FooterComponent,
       TagsComponent,
       ProductsComponent,
-      StartComponent
+      StartComponent,
+      OtherComponent
    ],
    imports: [
       BrowserModule,
