@@ -5,10 +5,10 @@ import { RouterModule } from '@angular/router';
 
 import { HomeComponent } from './MasterPage/home/home.component';
 import { ValueComponent } from './value/value.component';
-import { NavComponent } from './nav/nav.component';
+import { NavComponent } from './MasterPage/nav/nav.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AboutusComponent } from './MasterPage/aboutus/aboutus.component';
-import { FooterComponent } from './footer/footer.component';
+import { FooterComponent } from './MasterPage/footer/footer.component';
 import { TagsComponent } from './MasterPage/tags/tags.component';
 import { ProductsComponent } from './ProductsPage/products/products.component';
 import { MainRoutes } from './Routing/Routes';
@@ -25,7 +25,9 @@ import { OtherComponent } from './MasterPage/otherinfo/other.component';
       TagsComponent,
       ProductsComponent,
       StartComponent,
-      OtherComponent
+      OtherComponent,
+      NavComponent,
+      FooterComponent
    ],
    imports: [
       BrowserModule,

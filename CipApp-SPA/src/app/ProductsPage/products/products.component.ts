@@ -1,34 +1,33 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { trigger, transition, style, animate, ɵAnimationGroupPlayer, state } from '@angular/animations';
-import { stat } from 'fs';
 
 @Component({
   templateUrl: './products.component.html',
   styleUrls: ['./products.component.css'],
   animations: [
+    // trigger('SlideInOut', [
+    //   state('next', style({
+    //     transform: 'translateX(0%)',
+    //     opacity: '1'
+    //   })),
+    //   state('endNext', style({
+    //     transform: 'translateX(-50%)',
+    //     opacity: '0'
+    //   })),
+    //   state('previous', style({
+    //     transform: 'translateX(50%)',
+    //     opacity: '0'
+    //   })),
+    //   state('endPrevious', style({
+    //     transform: 'translateX(0%)',
+    //     opacity: '0'
+    //   })),
+    //   transition('next => endNext', animate('600ms ease-out')),
+    //   transition('endNext => next', animate('600ms ease-in')),
+    //   transition('previous => endPrevious', animate('600ms ease-in')),
+    //   transition('endPrevious => previous', animate('600ms ease-out'))
+    // ]),
     trigger('SlideInOut', [
-      state('next', style({
-        transform: 'translateX(0%)',
-        opacity: '1'
-      })),
-      state('endNext', style({
-        transform: 'translateX(-50%)',
-        opacity: '0'
-      })),
-      state('previous', style({
-        transform: 'translateX(50%)',
-        opacity: '0'
-      })),
-      state('endPrevious', style({
-        transform: 'translateX(0%)',
-        opacity: '0'
-      })),
-      transition('next => endNext', animate('600ms ease-out')),
-      transition('endNext => next', animate('600ms ease-in')),
-      transition('previous => endPrevious', animate('600ms ease-in')),
-      transition('endPrevious => previous', animate('600ms ease-out'))
-    ]),
-    trigger('SlideInOutEnter', [
       transition(':enter', [
         style({
           transform: 'translateX(50%)',
@@ -65,7 +64,7 @@ export class ProductsComponent implements OnInit {
   }
 
   public Next(): void{
-    this.state = 'next';
+    // this.state = 'next';
     this.isDone = false;
     this.isOpen++;
   }
@@ -76,7 +75,7 @@ export class ProductsComponent implements OnInit {
   }
 
   public AnimationIsDone(){
-    this.state = 'previous';
+    // this.state = 'previous';
     this.isDone = true;
   }
 

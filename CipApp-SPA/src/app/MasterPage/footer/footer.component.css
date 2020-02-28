@@ -7,11 +7,11 @@
     font-size: 30px;
 }
 
-p {
+.footer {
     color: black; 
-    font-size: large; 
+    font-size: large;
     font-weight: 300;
-    margin-top: 5%;
+    margin-top: 0%;
 }
 
 .border1{
@@ -21,7 +21,8 @@ p {
 }
 
 .footBackgroundImg{
-    background-image: url("../../assets/images/GreenInitiative.png");
+    background-image: url("../../../assets/images/GreenInitiative.png");
     height: 40%;
     background-attachment: fixed;
+    background-size: cover;
 }
