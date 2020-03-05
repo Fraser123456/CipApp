@@ -7,6 +7,10 @@ h1 {
     margin-top: 3%;
 }
 
+.heading{
+    font-size: 1.5rem;
+}
+
 img {
     max-width: 100%;
     height: auto;

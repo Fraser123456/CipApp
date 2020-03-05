@@ -5,51 +5,73 @@
   </div>
 </div>
 
-  <div class="row" style="height: 100%;">
-    <div class="col-sm-1 IconDiv" (click)="Previous()">
-      <i class="fa fa-chevron-left Icons" style="float: right"></i>
-    </div>
-    <div class="col-sm-10" style="overflow: hidden;">
-    <div class="col-sm-12" *ngIf="isOpen === 1 && isDone" [@SlideInOut] (@SlideInOut.done)=AnimationIsDone()>
+<div class="row" style="height: 100%;">
+  <div class="col-sm-1 IconDiv" (click)="Previous()">
+    <i class="fa fa-chevron-left Icons" style="float: right"></i>
+  </div>
+  <div class="col-sm-10" style="overflow: hidden;">
+    <div
+      class="col-sm-12"
+      *ngIf="isOpen === 1 && isDone"
+      [@SlideInOut]
+      (@SlideInOut.done)="AnimationIsDone()"
+    >
       <div style="width: 100%;">
         <div class="col-sm-12">
           <h1>SANBS Multi Hamper blood box</h1>
         </div>
-        <div class="col-sm-3">
-          <img class="mt-2" src="../../../assets/images/MultiHamper.jpg" />
-        </div>
-        <div class="col-sm-6">
-          <div>
-            <h5>Materials</h5>
-            <ul style="padding-left: 15px;">
-              <li>
-                External surface - High Density Polyethylene plastic with
-                Polystyrene(KR) as an internal linning material.
-              </li>
-              <li>
-                Lid type - High density Polyethylene plastic, foamed with
-                polyurethane and one locakable metal latch.
-              </li>
-              <li>Handels - 2 metal sprung handles</li>
-              <li>Double Rubber lid seal</li>
-              <li>Documents holder - tamper proof perspex holders on lid</li>
-              <li>Insulation material - Polyurethane with an insulation thickeness of 65mm</li>
-            </ul>
+        <div class="row">
+          <div class="col-sm-3">
+            <img class="mt-2" src="../../../assets/images/MultiHamper.jpg" />
+          </div>
+          <div class="col-sm-6">
+            <div>
+              <h5 class="heading">Materials</h5>
+              <ul style="padding-left: 15px;">
+                <li>
+                  External surface - High Density Polyethylene plastic with
+                  Polystyrene(KR) as an internal linning material.
+                </li>
+                <li>
+                  Lid type - High density Polyethylene plastic, foamed with
+                  polyurethane and one locakable metal latch.
+                </li>
+                <li>Handels - 2 metal sprung handles</li>
+                <li>Double Rubber lid seal</li>
+                <li>Documents holder - tamper proof perspex holders on lid</li>
+                <li>
+                  Insulation material - Polyurethane with an insulation
+                  thickeness of 65mm
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="col-sm-12" *ngIf="isOpen === 2 && isDone" style="background-color: teal;" [@SlideInOut] (@SlideInOut.done)=AnimationIsDone()>
+    <div
+      class="col-sm-12"
+      *ngIf="isOpen === 2 && isDone"
+      style="background-color: teal;"
+      [@SlideInOut]
+      (@SlideInOut.done)="AnimationIsDone()"
+    >
       <h1>This is 2</h1>
     </div>
-    <div class="col-sm-12" *ngIf="isOpen === 3 && isDone" style="background-color:turquoise;" [@SlideInOut] (@SlideInOut.done)=AnimationIsDone()>
+    <div
+      class="col-sm-12"
+      *ngIf="isOpen === 3 && isDone"
+      style="background-color:turquoise;"
+      [@SlideInOut]
+      (@SlideInOut.done)="AnimationIsDone()"
+    >
       <h1>This is 3</h1>
     </div>
   </div>
   <div class="col-sm-1 IconDiv">
     <i class="fa fa-chevron-right Icons" (click)="Next()"></i>
   </div>
-  </div>
+</div>
 
 <!-- <div class="col-sm-12 mt-5">
       <div class="row">
