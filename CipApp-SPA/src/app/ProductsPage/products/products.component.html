@@ -5,9 +5,9 @@
   </div>
 </div>
 
-<div class="row" style="height: 100%;">
-  <div class="col-sm-1 IconDiv" (click)="Previous()">
-    <i class="fa fa-chevron-left Icons" style="float: right"></i>
+<div class="row" style="height: 80%;">
+  <div class="col-sm-1 IconDiv">
+    <i class="fa fa-chevron-left Icons" style="float: right" *ngIf="isOpen !== 1" (click)="Previous()"></i>
   </div>
   <div class="col-sm-10" style="overflow: hidden;">
     <div
@@ -45,6 +45,20 @@
                 </li>
               </ul>
             </div>
+            <div>
+              <h5 class="heading">Specifications</h5>
+              <ul style="padding-left: 15px;">
+                <li>
+                  Inside Volume: 26.69 Litres
+                </li>
+                <li>
+                  Weight Fully Loaded: 16.0kg
+                </li>
+                <li>Weight Empty: 7.5kg</li>
+                <li>External dimension: 525x390x398 cm</li>
+                <li>Internal Dimensions: 398x260x258 cm</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -52,54 +66,202 @@
     <div
       class="col-sm-12"
       *ngIf="isOpen === 2 && isDone"
-      style="background-color: teal;"
       [@SlideInOut]
       (@SlideInOut.done)="AnimationIsDone()"
     >
-      <h1>This is 2</h1>
+    <div style="width: 100%;">
+      <div class="col-sm-12">
+        <h1>Vaccine cold box</h1>
+      </div>
+      <div class="row">
+        <div class="col-sm-3">
+          <img class="mt-2" src="../../../assets/images/Vaccine_Cold_Box.jpg" />
+        </div>
+        <div class="col-sm-6">
+          <div>
+            <h5 class="heading">Materials</h5>
+            <ul style="padding-left: 15px;">
+              <li>
+                External Surface Material - HDPE whit ABS plastic as an interanl lining materia.
+              </li>
+              <li>
+                Lid type - Hinged with toggle clip fittings.
+              </li>
+              <li>Handels - 2 metal sprung handles</li>
+              <li>Double Rubber lid seal</li>
+              <li>Documents holder - tamper proof perspex holders on lid</li>
+              <li>
+                Insulation material - Polyurethane with an insulation thickness of 50mm.
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h5 class="heading">Specifications</h5>
+            <ul style="padding-left: 15px;">
+              <li>
+                Vaccine storage capacity: 21.6 Litres
+              </li>
+              <li>
+                Weight Fully Loaded: 37.3kg
+              </li>
+              <li>Weight Empty: 10.3kg</li>
+              <li>External dimension: 52x64x39 cm</li>
+              <li>Internal Dimensions: 39x52x24 cm</li>
+              <li>Vaccine storage dimensions: 30x40x18 cm</li>
+              <li>test report: CISR EC04-0329 (September 2004)</li>
+              <li>Meets WHO/UNICEF Standard E4/CB.3</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
     </div>
     <div
       class="col-sm-12"
       *ngIf="isOpen === 3 && isDone"
-      style="background-color:turquoise;"
       [@SlideInOut]
       (@SlideInOut.done)="AnimationIsDone()"
     >
-      <h1>This is 3</h1>
-    </div>
-  </div>
-  <div class="col-sm-1 IconDiv">
-    <i class="fa fa-chevron-right Icons" (click)="Next()"></i>
-  </div>
-</div>
-
-<!-- <div class="col-sm-12 mt-5">
+    <div style="width: 100%;">
+      <div class="col-sm-12">
+        <h1>Safety Box</h1>
+      </div>
       <div class="row">
-        <div class="col-sm-12" style="display: flex;">
-          <div style="width: 100%;">
-            <div class="col-sm-3">
+        <div class="col-sm-3">
+          <img class="mt-2" src="../../../assets/images/Safety Box.jpg" />
+        </div>
+        <div class="col-sm-6">
+          <div>
+            <h5 class="heading">Materials</h5>
+            <ul style="padding-left: 15px;">
+              <li>
+                Carton
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h5 class="heading">Specifications</h5>
+            <ul style="padding-left: 15px;">
+              <li>
+                Volume: 5/10 litres
+              </li>
+              <li>
+                Capacity: 310 autodisable syringes of 0.5ml with needles
+              </li>
+              <li>Dimensions before assembly: 734x343x3.6 mm</li>
+              <li>Dimensions after assembly: 376x217x132 mm</li>
+              <li>Thickness of walls: 1.8mm</li>
+              <li>Weight fully assembled: 546 grams</li>
+              <li>Diameter of syringes inser hole: 35 mm</li>
+              <li>Test report: Froce/m1460-223828.a (April 2005)</li>
+              <li>Meets WHO/UNICEF standard E10/IC.2</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div
+      class="col-sm-12"
+      *ngIf="isOpen === 4 && isDone"
+      [@SlideInOut]
+      (@SlideInOut.done)="AnimationIsDone()"
+    >
+    <div style="width: 100%;">
+      <div class="col-sm-12">
+        <h1>"Kick Polio" Vaccine box</h1>
+      </div>
+      <div class="row">
+        <div class="col-sm-3">
+          <img class="mt-2" style="width: 155px;" src="../../../assets/images/Kick_Poilio1.jpg" />
+          <div>
+            <img class="mt-2 pl-1" style="width: 155px;" src="../../../assets/images/Kick_Poilio.jpg" />
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div>
+            <h5 class="heading">Materials</h5>
+            <ul style="padding-left: 15px;">
+              <li>
+                Carton
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h5 class="heading">Specifications</h5>
+            <ul style="padding-left: 15px;">
+              <li>
+                Volume: 5/10 litres
+              </li>
+              <li>
+                Capacity: 310 autodisable syringes of 0.5ml with needles
+              </li>
+              <li>Dimensions before assembly: 734x343x3.6 mm</li>
+              <li>Dimensions after assembly: 376x217x132 mm</li>
+              <li>Thickness of walls: 1.8mm</li>
+              <li>Weight fully assembled: 546 grams</li>
+              <li>Diameter of syringes inser hole: 35 mm</li>
+              <li>Test report: Froce/m1460-223828.a (April 2005)</li>
+              <li>Meets WHO/UNICEF standard E10/IC.2</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div
+      class="col-sm-12"
+      *ngIf="isOpen === 5 && isDone"
+      [@SlideInOut]
+      (@SlideInOut.done)="AnimationIsDone()"
+    >
+      <div style="width: 100%;">
+        <div class="col-sm-12">
+          <h1>Cold Box</h1>
+        </div>
+        <div class="row">
+          <div class="col-sm-3">
+            <img class="mt-2" src="../../../assets/images/Cold_Box1.png" />
+            <img class="mt-2" src="../../../assets/images/Cold_Box.png" />
+          </div>
+          <div class="col-sm-6">
+            <div>
               <div>
-                SANBS Multi Hamper blood box
+                <h5 class="heading">Frigivac Col Box 9.79ltr (available in other sizes)</h5>
               </div>
-              <img class="mt-2" src="../../../assets/images/MultiHamper.jpg" />
+              <h5 class="heading">Materials</h5>
+              <ul style="padding-left: 15px;">
+                <li>
+                  Single wall brown kraft board with blue print.
+                </li>
+                <li>
+                  Polyurethane inner with high density polyethylene lining.
+                </li>
+              </ul>
             </div>
-            <div class="col-sm-6">
-              <div>
-                <h5>Materials</h5>
-                <ul style="padding-left: 15px;">
-                  <li>
-                    External surface - High Density Polyethylene plastic with
-                    Polystyrene(KR) as an internal linning material.
-                  </li>
-                  <li>
-                    Lid type - High density Polyethylene plastic, foamed with
-                    polyurethane and one locakable metal latch.
-                  </li>
-                  <li>Milk</li>
-                </ul>
-              </div>
+            <div>
+              <h5 class="heading">Specifications</h5>
+              <ul style="padding-left: 15px;">
+                <li>
+                  Packing Volume: 9.79 litres
+                </li>
+                <li>
+                  Insulation: 30mm
+                </li>
+                <li>Insulation type: Closed cell polyurethane</li>
+                <li>External dimension: 306x236x314 mm</li>
+                <li>Internal Dimensions: 240x170x230 mm</li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
-    </div> -->
+    </div>
+  </div>
+  <div class="col-sm-1 IconDiv">
+    <i class="fa fa-chevron-right Icons" *ngIf="isOpen !== 5" (click)="Next()"></i>
+  </div>
+</div>
+<app-footer></app-footer>
+
+
